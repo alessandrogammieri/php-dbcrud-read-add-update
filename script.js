@@ -5,8 +5,6 @@ function getDrink() {
         method: "GET",
         success: function (data) {
             printDrink(data);  
-            console.log(data);
-            
         },
         error: function() {
             alert("C'è stato un errore in download");
@@ -26,12 +24,26 @@ function printDrink(data) {
     }
 }
 
-
-
-
+function deleteDrink() {  
+    var element = $(this);
+    var box = element.parent();
+    var idDrink = box.data("id")  
+    $.ajax({
+        url: "api-del.php",
+        method: "GET",
+        data: { id: idDrink},
+        success: function (data) {
+            getDrink();
+        },
+        error: function () {
+            alert("C'è stato un errore nella cancellazione");
+        }
+    })
+}
 
 function init() {
     getDrink();
+    $(document).on("click", "#delete", deleteDrink);
 }
 
 $(document).ready(init);
