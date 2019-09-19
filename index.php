@@ -26,8 +26,9 @@
         </div>
         <input id="add" type="submit" value="Aggiungi">
       </div>
+      <h2>I nostri Drink</h2>
       <div class="listino">
-        <h2>I nostri Drink</h2>
+        
       </div> 
     </div>
 
