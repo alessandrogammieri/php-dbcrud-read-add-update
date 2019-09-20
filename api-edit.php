@@ -25,7 +25,7 @@
         UPDATE bancone
         SET drink_name = '" . $drink_name . "',
             brand = '" . $brand . "',
-            price = '" . $price . "',
+            price = " . $price . ",
             expiration_date = '" . $expiration_date . "'
         WHERE id = " . $id . "
     ";

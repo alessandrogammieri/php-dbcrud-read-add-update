@@ -23,7 +23,7 @@
     $query = "
         INSERT INTO bancone (drink_name, brand, price, expiration_date)
         VALUES
-        ('" . $drink_name . "', '" . $brand . "', '" . $price . "', '" . $expiration_date . "')
+        ('" . $drink_name . "', '" . $brand . "', " . $price . ", '" . $expiration_date . "')
     ";
 
     $res = $conn -> query($query);

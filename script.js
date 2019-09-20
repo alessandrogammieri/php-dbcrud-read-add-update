@@ -27,7 +27,7 @@ function printDrink(data) {
 function deleteDrink() {  
     var element = $(this);
     var box = element.parent();
-    var idDrink = box.data("id")  
+    var idDrink = box.data("id");  
     $.ajax({
         url: "api-del.php",
         method: "GET",
@@ -46,7 +46,7 @@ function addDrink() {
     var brand = $(".brand").val();
     var price = $(".price").val();
     var date = $(".date").val();
-    var mom = moment(date, "YYYY-MM-DD");
+    var mom = moment(date, "DD-MM-YYYY");
     var expiration_date = mom.format("YYYY-MM-DD");
     $.ajax({
         url: "api-add.php",
@@ -74,12 +74,12 @@ function addDrink() {
 function updateDrink() {  
     var element = $(this);
     var box = element.parent();
-    var idDrink = box.data("id") 
+    var idDrink = box.data("id");
     var drink_name = prompt("Modifica il nome del Drink");
     var brand = prompt("Modifica la marca del Drink");
     var price = prompt("Modifica il prezzo del Drink");
     var date = prompt("Modifica la data di scadenza");
-    var mom = moment(date, "YYYY-MM-DD");
+    var mom = moment(date, "DD-MM-YYYY");
     var expiration_date = mom.format("YYYY-MM-DD");
     $.ajax({
         url: "api-edit.php",
