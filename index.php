@@ -17,12 +17,12 @@
       <h2>Aggiungi un Drink</h2>
       <div class="form">
         <div>
-            Drink: <input class="number" type="text">
-            Marca: <input class="piano" type="text">
+            Drink: <input class="name" type="text">
+            Marca: <input class="brand" type="text">
         </div>
         <div>
-            Prezzo: <input class="letti" type="text">
-            Scadenza: <input class="letti" type="text">
+            Prezzo: <input class="price" type="text">
+            Scadenza: <input class="date" type="text">
         </div>
         <input id="add" type="submit" value="Aggiungi">
       </div>
